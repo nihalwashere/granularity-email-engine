@@ -1,0 +1,156 @@
+{
+  "name": "@getgranularity/email-engine",
+  "author": "@granularity",
+  "license": "ISC",
+  "version": "1.0.3",
+  "description": "This library is for creating reusable, testable components and email templates using React.",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/getgranularity/email-engine.git"
+  },
+  "main": "lib/index.js",
+  "scripts": {
+    "test": "react-scripts test --env=jsdom --setupFiles ./src/setupTests.js -u",
+    "start": "npm run storybook",
+    "storybook": "start-storybook -p 9001 -c .storybook",
+    "format": "prettier --write \"src/**/*.js\"",
+    "lint": "eslint \"src/**/*.js\"",
+    "precommit": "lint-staged",
+    "build": "npm run build-lib",
+    "build-lib": "babel src --out-dir lib --copy-files",
+    "build-storybook": "build-storybook -c .storybook -o .out"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.11.6",
+    "@babel/core": "^7.11.6",
+    "@babel/plugin-proposal-class-properties": "^7.10.4",
+    "@babel/plugin-transform-modules-commonjs": "^7.10.4",
+    "@babel/preset-env": "^7.11.5",
+    "@babel/preset-react": "^7.10.4",
+    "@storybook/addon-storyshots": "^6.0.26",
+    "@storybook/preset-create-react-app": "^3.1.4",
+    "babel-eslint": "^10.1.0",
+    "babel-loader": "^8.1.0",
+    "babel-plugin-react-intl": "^8.2.5",
+    "chai": "^4.2.0",
+    "enzyme-to-json": "^3.6.1",
+    "eslint": "^7.10.0",
+    "eslint-config-airbnb": "^18.2.0",
+    "eslint-config-prettier": "^6.12.0",
+    "eslint-plugin-import": "^2.22.1",
+    "eslint-plugin-jsx-a11y": "^6.3.1",
+    "eslint-plugin-prettier": "^3.1.4",
+    "eslint-plugin-react": "^7.21.3",
+    "husky": "^4.3.0",
+    "lint-staged": "^10.4.0",
+    "mockery": "^2.1.0",
+    "prettier": "^2.1.2",
+    "react-scripts": "^3.4.3",
+    "react-test-renderer": "^16.13.1",
+    "require-context.macro": "^1.2.2",
+    "sinon": "^5.0.1-next.1",
+    "sinon-chai": "^3.5.0"
+  },
+  "dependencies": {
+    "@brainly/onesky-utils": "^1.4.1",
+    "@storybook/react": "^6.0.26",
+    "check-prop-types": "^1.1.2",
+    "enzyme": "^3.11.0",
+    "enzyme-adapter-react-16": "^1.15.5",
+    "is-iso-date": "0.0.1",
+    "jsonfile": "^6.0.1",
+    "lodash.chunk": "^4.2.0",
+    "loglevel": "^1.7.0",
+    "moment": "^2.29.1",
+    "moment-timezone": "^0.5.31",
+    "pretty": "^2.0.0",
+    "prompt-confirm": "^2.0.4",
+    "prop-types": "^15.7.2",
+    "react": "^16.13.1",
+    "react-custom-proptypes": "^1.1.1",
+    "react-dom": "^16.13.1",
+    "react-html-email": "^3.0.0",
+    "react-intl": "^5.8.4",
+    "semver": "^7.3.2",
+    "shelljs": "^0.8.4"
+  },
+  "engines": {
+    "node": "14.16.0",
+    "npm": "6.14.11"
+  },
+  "jest": {
+    "snapshotSerializers": [
+      "enzyme-to-json/serializer"
+    ]
+  },
+  "eslintConfig": {
+    "plugins": [
+      "prettier",
+      "import",
+      "jsx-a11y",
+      "react"
+    ],
+    "env": {
+      "browser": true,
+      "node": true,
+      "jest": true
+    },
+    "extends": [
+      "eslint:recommended",
+      "airbnb",
+      "prettier",
+      "plugin:import/errors",
+      "plugin:import/warnings",
+      "plugin:react/recommended",
+      "plugin:jsx-a11y/recommended"
+    ],
+    "rules": {
+      "prettier/prettier": "error",
+      "react/jsx-one-expression-per-line": 0,
+      "react/prefer-stateless-function": 0,
+      "import/prefer-default-export": 0,
+      "react/display-name": 0,
+      "react/jsx-filename-extension": [
+        1,
+        {
+          "extensions": [
+            ".js",
+            ".jsx"
+          ]
+        }
+      ]
+    },
+    "parserOptions": {
+      "ecmaVersion": 7,
+      "sourceType": "module"
+    },
+    "parser": "babel-eslint"
+  },
+  "prettier": {
+    "singleQuote": true,
+    "trailingComma": "all",
+    "parser": "flow"
+  },
+  "lint-staged": {
+    "*.js": [
+      "prettier --write",
+      "eslint --fix",
+      "git add"
+    ]
+  },
+  "babel": {
+    "presets": [
+      "@babel/preset-env",
+      "@babel/preset-react"
+    ],
+    "plugins": [
+      "@babel/plugin-transform-modules-commonjs",
+      "@babel/plugin-proposal-class-properties",
+      "macros"
+    ],
+    "ignore": [
+      "src/**/*.story.js",
+      "src/**/*.spec.js"
+    ]
+  }
+}

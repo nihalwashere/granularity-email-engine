@@ -1,0 +1,6 @@
+node_modules/
+lib/
+.out/
+*.tgz
+.vscode/
+*.DS_Store

@@ -1,0 +1,44 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`it should validate stuff when we dont pass anything we should get a validation error 1`] = `"Failed prop type: The prop \`data\` is marked as required in \`WithIntl\`, but its value is \`undefined\`."`;
+
+exports[`it should validate stuff when we pass all props correctly, we will get rendered string 1`] = `
+"<!DOCTYPE html PUBLIC \\"-//W3C//DTD XHTML 1.0 Strict//EN\\" \\"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd\\">
+<html lang=\\"en\\" xmlns=\\"http://www.w3.org/1999/xhtml\\">
+
+  <head>
+    <meta http-equiv=\\"Content-Type\\" content=\\"text/html; charset=utf-8\\" />
+    <meta name=\\"viewport\\" content=\\"width=device-width, initial-scale=1.0\\" />
+    <title>Hurray, your form just received a new response!</title>
+  </head>
+
+  <body style=\\"width:100%;margin:0;padding:0;-webkit-text-size-adjust:100%;-ms-text-size-adjust:100%\\">
+    <table width=\\"100%\\" height=\\"100%\\" cellPadding=\\"0\\" cellSpacing=\\"0\\" border=\\"0\\" align=\\"left\\" valign=\\"top\\">
+      <tbody>
+        <tr>
+          <td align=\\"center\\" valign=\\"top\\">
+            <table width=\\"100%\\" align=\\"center\\" cellPadding=\\"0\\" cellSpacing=\\"0\\" border=\\"0\\" valign=\\"top\\">
+              <tbody>
+                <h1 style=\\"font-family:Helvetica;font-size:24px;line-height:130%;color:#29333D;margin-top:4px;margin-bottom:10px;padding-top:26px;text-align:left\\">Hello Nihal,</h1>
+                <p style=\\"color:#5C6670;font-family:Helvetica;font-size:16px;line-height:150%;text-align:left\\">Your form Customer Feedback received a new response.</p>
+                <p>
+                <p>
+                <p style=\\"margin-bottom:8px;display:flex;flex-direction:column;text-align:left\\"><span style=\\"margin-bottom:4px;font-family:Helvetica;font-size:14px\\">1) What is your name?</span><span style=\\"font-family:Helvetica;font-size:16px\\">Nihal</span></p>
+                </p>
+                <p>
+                <p style=\\"margin-bottom:8px;display:flex;flex-direction:column;text-align:left\\"><span style=\\"margin-bottom:4px;font-family:Helvetica;font-size:14px\\">2) Where do you work at?</span><span style=\\"font-family:Helvetica;font-size:16px\\">Granularity</span></p>
+                </p>
+                <p>
+                <p style=\\"margin-bottom:8px;display:flex;flex-direction:column;text-align:left\\"><span style=\\"margin-bottom:4px;font-family:Helvetica;font-size:14px\\">3) What is your work email?</span><span style=\\"font-family:Helvetica;font-size:16px\\">nihal@getgranularity.com</span></p>
+                </p>
+                </p>
+              </tbody>
+            </table>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </body>
+
+</html>"
+`;
